@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  app:
+    image: 'git.nordicwise.com:4999/prototypes/new-datastudio-prototype/stylistic:01'
+    ports:
+      - "5024:5024"
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5024"]
